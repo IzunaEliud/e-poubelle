@@ -1,0 +1,33 @@
+#p_connect{
+    @apply h-screen w-screen bg-gray-50 flex items-center justify-center;
+}
+
+#form{
+    height: 800px;
+    @apply flex flex-col bg-gray-300 px-40 items-center justify-center;
+}
+#form img{
+    @apply mb-16;
+}
+#form div{
+    width: 480px;
+    @apply bg-gray-300 grid grid-cols-3 mb-10;
+}
+#form div label{
+    @apply flex justify-start text-lg 
+}
+#form div input{
+    @apply flex justify-end col-span-2 bg-gray-300 border-black border-b hover:border-gray-600
+}
+#form div input:focus{
+    @apply border-b border-green-700 outline-none
+}
+
+button{
+    @apply bg-gray-700 w-28 h-10 border border-gray-500 rounded-md m-3 shadow-lg hover:bg-gray-300
+}
+
+#connectPageImg{
+    width: 500px;
+    height: 800px;
+}

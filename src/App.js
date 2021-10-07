@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route , Switch , Redirect } from 'react-router-dom';
+import { useState } from 'react'
+import './components/component.css'
+import ConnectPage from './components/ConnectPage';
+import SignUp from './components/SignUp';
 
 function App() {
+  const [authorize, setAuthorize] = useState(false)
+  console.log(authorize)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route path="/connection">
+            <ConnectPage/>
+          </Route>
+          <Route path="/inscription_client">
+            <SignUp/>
+          </Route>
+          <Route path="/home">
+            Home Page
+          </Route>
+        </Switch>
+        {/* <Route>
+          {authorize ? <Redirect to="/home"/>:<Redirect to="/inscription_client"/>}
+        </Route> */}
+      </Router>
     </div>
   );
 }
