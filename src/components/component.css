@@ -23,7 +23,7 @@
     @apply border-b border-green-700 outline-none
 }
 
-button{
+.btn{
     @apply bg-gray-700 w-28 h-10 border border-gray-500 rounded-md m-3 shadow-lg hover:bg-gray-300
 }
 
